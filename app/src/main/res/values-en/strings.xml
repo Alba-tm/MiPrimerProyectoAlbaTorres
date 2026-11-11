@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">reto1</string>
+    <string name="ejemplo_de_componentes_android">Android Components Example</string>
+    <string name="componentes_para_mostrar_informacion">Components for displaying information</string>
+    <string name="este_texto_se_muestra_mediante_un_textview">This text is displayed using a TextView</string>
+    <string name="progreso_50">Progress: 50%</string>
+    <string name="desc_logo_android">Official Android icon</string>
+    <string name="videoview">VideoView</string>
+    <string name="webview">WebView</string>
+    <string name="componentes_de_entrada_e_interaccion">Input and interaction components</string>
+    <string name="introduce_tu_nombre">Enter your name</string>
+    <string name="selecciona_tecnologias">Select technologies:</string>
+    <string name="android">Android</string>
+    <string name="react">React</string>
+    <string name="flutter">Flutter</string>
+    <string name="selecciona_una_modalidad">Select a modality:</string>
+    <string name="presencial">On-site</string>
+    <string name="online">Online</string>
+    <string name="mixta">Mixed</string>
+    <string name="notificaciones">Notifications</string>
+    <string name="selecciona_un_curso">Select a course:</string>
+    <string name="nivel_seleccionado">Selected level: 50</string>
+    <string name="guardar_informacion">Save information</string>
+    <string name="resultado_placeholder">Result will appear here.</string>
+
+    <string-array name="opciones_cursos">
+        <item>1st DAM</item>
+        <item>2nd DAM</item>
+        <item>1st DAW</item>
+    </string-array>
+</resources>
