@@ -18,6 +18,32 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        //Función checkbox
+        val cbAndroid: android.widget.CheckBox = findViewById(R.id.cbAndroid)
+        val cbReact: android.widget.CheckBox = findViewById(R.id.cbReact)
+        val cbFlutter: android.widget.CheckBox = findViewById(R.id.cbFlutter)
+        val tvResultado: android.widget.TextView = findViewById(R.id.tvResultado)
+
+        val checkListener = android.widget.CompoundButton.OnCheckedChangeListener { _, _ ->
+            val seleccion = mutableListOf<String>()
+            if (cbAndroid.isChecked) seleccion.add("Android")
+            if (cbReact.isChecked) seleccion.add("React")
+            if (cbFlutter.isChecked) seleccion.add("Flutter")
+
+            tvResultado.text = if (seleccion.isNotEmpty()) {
+                "Tecnologías: ${seleccion.joinToString(", ")}"
+            } else {
+                "Ninguna tecnología seleccionada"
+            }
+        }
+
+        cbAndroid.setOnCheckedChangeListener(checkListener)
+        cbReact.setOnCheckedChangeListener(checkListener)
+        cbFlutter.setOnCheckedChangeListener(checkListener)
+
+
+        //Función para cargar la página web
         val myWebView: WebView = findViewById(R.id.wvWeb)
         myWebView.webViewClient = WebViewClient()
         myWebView.settings.javaScriptEnabled = true
