@@ -50,6 +50,20 @@ class MainActivity : AppCompatActivity() {
             android.widget.Toast.makeText(this, mensaje, android.widget.Toast.LENGTH_SHORT).show()
         }
 
+        //Botón de Guardar + Nombre
+        val btnGuardar: android.widget.Button = findViewById(R.id.btnGuardar1)
+        val etNombre: android.widget.EditText = findViewById(R.id.etNombre)
+
+        btnGuardar.setOnClickListener {
+            val nombre = etNombre.text.toString()
+            if (nombre.isNotEmpty()) {
+                tvResultado.text = "¡Hola $nombre! Datos guardados."
+                android.widget.Toast.makeText(this, "Guardado con éxito",
+                    android.widget.Toast.LENGTH_SHORT).show()
+            } else {
+                etNombre.error = "Introduce tu nombre"
+            }
+        }
 
         //Función para cargar la página web
         val myWebView: WebView = findViewById(R.id.wvWeb)
