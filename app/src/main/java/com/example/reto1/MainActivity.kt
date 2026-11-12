@@ -42,6 +42,14 @@ class MainActivity : AppCompatActivity() {
         cbReact.setOnCheckedChangeListener(checkListener)
         cbFlutter.setOnCheckedChangeListener(checkListener)
 
+        //Función switch
+        val swNotificaciones: android.widget.Switch = findViewById(R.id.swNotificaciones)
+
+        swNotificaciones.setOnCheckedChangeListener { _, isChecked ->
+            val mensaje = if (isChecked) "Notificaciones ACTIVADAS" else "Notificaciones DESACTIVADAS"
+            android.widget.Toast.makeText(this, mensaje, android.widget.Toast.LENGTH_SHORT).show()
+        }
+
 
         //Función para cargar la página web
         val myWebView: WebView = findViewById(R.id.wvWeb)
